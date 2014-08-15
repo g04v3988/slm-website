@@ -1,0 +1,31 @@
+﻿#carousel 
+{
+	margin: auto;
+	width: 1063px;
+	overflow:hidden;
+}
+
+#carousel ul 
+{
+	width: 6378px;
+	padding: 0;
+	margin: 0;
+}
+
+#carousel ul li 
+{
+	display:block;
+	float:left;
+	width:1063px;
+	height:650px;
+	text-align: center;
+	list-style: none;
+	float:	left;
+	
+	-moz-transition:all .1s ease 0s;
+	-ms-transition:all .1s ease 0s;
+	-o-transition:all .1s ease 0s;
+	-webkit-transition:all .1s ease 0s;
+	transition:all .1s ease 0s;
+
+}

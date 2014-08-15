@@ -1,0 +1,67 @@
+﻿*
+{
+	margin:0px;
+	padding:0px;
+	background-color: rgba(102,46,145,1);
+	font-family:Calibri;
+}
+
+a
+{
+	background-color:transparent;
+	text-decoration:none;
+}
+
+.logo
+{
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	padding-left:30px;
+	padding-top:5px;
+	width: 1033px;
+	
+	/*border-bottom-left-radius:30px;*/
+	border-top-left-radius:30px;
+	
+	/*border-bottom-right-radius:30px;*/
+	border-top-right-radius:30px;
+}
+
+.social-media-icons
+{
+	float:right;
+	width:30%;
+	margin-top: 45px;
+	background-color:white;
+}
+
+.main-gallery
+{
+	/*margin-top: 15px;*/
+	margin-left:auto;
+	margin-right:auto;
+	width:1063px;
+	margin-bottom:0px;
+}
+
+.info-text
+{ 
+	padding:10px;
+	background-color:white;
+	
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+
+}
+
+.video
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:420px;
+	height:345px;
+	background-color:white;
+}
+

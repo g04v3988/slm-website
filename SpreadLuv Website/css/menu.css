@@ -1,0 +1,128 @@
+﻿.container
+{
+	/*margin-top: 15px;*/
+	margin-left:auto;
+	margin-right:auto;
+	height:50px;
+	width: 1063px;
+	border:1px solid black;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	
+	/*border-bottom-left-radius:50px;
+	border-top-left-radius:50px;
+	
+	border-bottom-right-radius:50px;
+	border-top-right-radius:50px;*/
+}
+
+.menu
+{
+	list-style:none;
+	font-family:Calibri;
+	
+}
+
+.menu li
+{
+	display:block;
+	height:50px;
+	width:125px;
+	float:left;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	line-height:50px;
+	text-align:center;
+	border-right:1px solid black;
+	/*border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;*/
+}
+
+.start-menu
+{
+	/*border-bottom-left-radius:50px;
+	border-top-left-radius:50px;*/
+}
+
+.end-menu
+{
+	/*border-bottom-right-radius:50px;
+	border-top-right-radius:50px;*/
+}
+
+.menu li:hover
+{
+	background: #ffffff;
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, #ffffff), color-stop(100%, #00ff01));
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -o-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: radial-gradient(ellipse at center, #ffffff 0%, #00ff01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ff01', GradientType=1 );
+}
+
+.sub-menu
+{
+	visibility:hidden;
+	position:relative;
+	left:0px;
+	top:0px;
+	z-index:5;
+}
+
+.sub-menu li
+{
+	/*border-top: 1px solid black;
+	border-left: 1px solid black;*/
+	-moz-transition:all .1s ease 0s;
+	-ms-transition:all .1s ease 0s;
+	-o-transition:all .1s ease 0s;
+	-webkit-transition:all .1s ease 0s;
+	transition:all .1s ease 0s;
+	border-left:1px solid black;
+	border-top:1px solid black;
+}
+
+.sub-menu li:hover
+{
+	background: #ffffff;
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, #ffffff), color-stop(100%, #00ff01));
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -o-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+	background: radial-gradient(ellipse at center, #ffffff 0%, #00ff01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ff01', GradientType=1 );
+
+	width:145px;
+	border-bottom:1px solid black;
+}
+
+.sub-menu-end
+{
+	border-bottom: 1px solid black;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+
+
+}
+
+.menu li:hover .sub-menu
+{
+	visibility:visible;
+}
