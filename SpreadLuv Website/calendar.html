@@ -3,14 +3,68 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Spread Luv: Vision</title>
+<title>Spread Luv: Events Calendar</title>
 <link rel="stylesheet" type="text/css" href="css/menu.css"/>
 <link rel="stylesheet" type="text/css" href="css/general.css"/>
 <link rel="stylesheet" type="text/css" href="css/carousel.css"/>
 <link rel="stylesheet" type="text/css" href="css/ml-social-buttons.css"/>
 <link rel="stylesheet" type="text/css" href="css/font/font.css"/>
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+
 
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script src='js/moment.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src='js/gcal.js'></script>
+
+<script>
+
+	$(document).ready(function() {
+	
+		$('#calendar').fullCalendar({
+		
+			// US Holidays
+			events: 'https://www.google.com/calendar/feeds/vanderlinde.henry%40gmail.com/public/basic',
+			
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+			
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+		
+	#loading {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	#calendar {
+		width: 900px;
+		margin: 40px auto;
+	}
+
+</style>
+
 
 </head>
 
@@ -67,18 +121,11 @@
 
 <div class="main-gallery">
 	<div class="bottom-page-border">
-		<h1 class="info-text-padding">Mission & Vision</h1>
-		<p class="info-text">
-			We are a growing, dynamic, non-profit company focused on providing effective career guidance to learners at under-resourced schools through workshops facilitated by actual working professionals giving first-hand advice and tips.</p>
-
-		<p class="info-text-padding">Check out this video, proudly brought to you by SpreadLuv and FNB, which will give you a sense of what SpreadLuv is all about!</p>
-		<div class="video">
-			<iframe style="background-color:black;" width="420" height="345" src="https://www.youtube.com/embed/JKtSWXhJrXU"></iframe>
+		<div class="info-text-padding">
+			<div id='calendar'></div>
 		</div>
 	</div>
 </div>
-
-
 
 </body>
 
