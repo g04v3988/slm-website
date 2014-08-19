@@ -82,7 +82,7 @@
 	position:relative;
 	left:0px;
 	top:0px;
-	z-index:5;
+	z-index:5000;
 }
 
 .sub-menu li

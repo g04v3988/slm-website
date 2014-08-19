@@ -6,12 +6,13 @@
 <title>Spread Luv: Home</title>
 <link rel="stylesheet" type="text/css" href="css/menu.css"/>
 <link rel="stylesheet" type="text/css" href="css/general.css"/>
-<link rel="stylesheet" type="text/css" href="css/carousel.css"/>
 <link rel="stylesheet" type="text/css" href="css/ml-social-buttons.css"/>
 <link rel="stylesheet" type="text/css" href="css/font/font.css"/>
+<link rel="stylesheet" type="text/css" href="css/gallery.css" />
 
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+<script type="text/javascript" src="js/autoadvance.js"></script>
 
 </head>
 
@@ -55,7 +56,7 @@
 	<li>Articles</li>
 	<li><a href="calendar.html">Events Calendar</a></li>
 	<li>News Letter</li>
-	<li>Galleries</li>
+	<li><a href="gallery.html">Gallery</a></li>
 	<li>General Blog</li>
 	<li>Photo Blog</li>
 	<li class="sub-menu-end">Press Kit</li>
@@ -67,23 +68,28 @@
 </div>
 
 <div class="main-gallery">
-	<div id="carousel">
-		<ul>
-			<li><img alt="" src="images/Gallery/IMG_5937.jpg" style="width:100%;"></li>
-			<li><img alt="" src="images/Gallery/IMG_5911.jpg" style="width:100%;"></li>
-			<li><img alt="" src="images/Gallery/IMG_5956.jpg" style="width:100%;"></li>
-			<li><img alt="" src="images/Gallery/IMG_5962.jpg" style="width:100%;"></li>
-			<li><img alt="" src="images/Gallery/IMG_6001.jpg" style="width:100%;"></li>
-			<li><img alt="" src="images/Gallery/IMG_5905.jpg" style="width:100%;"></li>
-		</ul>
-	</div>
-	
-	<div class="bottom-page-border">
-	<p class="info-text-padding">
-		We are a growing, dynamic, non-profit organisation, founded in 2009, comprising of young black professionals from all different walks of life, industries and professions.  We specialise in giving career guidance tips to young learners at our Career Guidance Events.
-	</p>
-</div>
+	<div class="info-text-padding-top">
+	    <div id="slideshow">
 
+            <ul class="slides">
+                <li><img src="images/galleries/latest/1.jpg" width="1000" height="667" /></li>
+                <li><img src="images/galleries/latest/2.jpg" width="1000" height="667" /></li>
+                <li><img src="images/galleries/latest/3.jpg" width="1000" height="667" /></li>
+                <li><img src="images/galleries/latest/4.jpg" width="1000" height="667" /></li>
+                <li><img src="images/galleries/latest/5.jpg" width="1000" height="667" /></li>
+                <li><img src="images/galleries/latest/6.jpg" width="1000" height="667" /></li>
+            </ul>
+
+            <span class="arrow previous"></span>
+            <span class="arrow next"></span>
+        </div>
+        
+        <h1 class="info-text-padding">About Us</h1>
+	    <div class="info-text-padding">
+		    We are a growing, dynamic, non-profit organisation, founded in 2009, comprising of young black professionals from all different walks of life, industries and professions.  We specialise in giving career guidance tips to young learners at our Career Guidance Events.
+	    </div>
+    </div>
+    <div class="bottom-page-border"></div>
 </div>
 
 </body>
