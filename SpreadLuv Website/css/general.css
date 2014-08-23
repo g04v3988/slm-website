@@ -1,7 +1,7 @@
 ﻿*
 {
-	margin:0%;
-	padding:0%;
+	margin:0px;
+	padding:0px;
 	background-color: rgba(102,46,145,1);
 	font-family:Calibri;
 }
@@ -33,7 +33,7 @@ a
 {
 	float:right;
 	width:30%;
-	margin-top: 6%;
+	margin-top: 45px;
 	background-color:white;
 }
 
