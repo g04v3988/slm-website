@@ -24,7 +24,7 @@ Designer: Tony Thomas
 
 .social-media-a {
 	float: left;
-	margin: 0 30px 20px 0;
+	margin: 0 30px 10px 0;
 }
 
 
@@ -73,6 +73,9 @@ Designer: Tony Thomas
 	background-image: -moz-linear-gradient(bottom, #4974b0, #6e90c0);
 	background-image: -o-linear-gradient(bottom, #4974b0, #6e90c0);
 	background-image: linear-gradient(to top, #4974b0, #6e90c0);
+	
+	float: left;	
+	margin: 0 10px 0 0; 
 }
 
 .facebook:after {
@@ -109,6 +112,10 @@ Designer: Tony Thomas
 	background-image: -moz-linear-gradient(bottom, #4e9edc, #5daae6);
 	background-image: -o-linear-gradient(bottom, #4e9edc, #5daae6);
 	background-image: linear-gradient(to top, #4e9edc, #5daae6);
+	
+	float: left;	
+	margin: 0 10px 0 0; 
+
 }
 
 .twitter:after {
@@ -251,6 +258,10 @@ Designer: Tony Thomas
 	background-image: -moz-linear-gradient(bottom, #005a87, #066696);
 	background-image: -o-linear-gradient(bottom, #005a87, #066696);
 	background-image: linear-gradient(to top, #005a87, #066696);
+	
+	float: left;	
+	margin: 0 10px 0 0; 
+
 }
 
 .linkedin:after {
