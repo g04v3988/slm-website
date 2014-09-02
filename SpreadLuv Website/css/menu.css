@@ -1,11 +1,12 @@
 ﻿.container
 {
-	/*margin-top: 15px;*/
+    clear:both;
 	margin-left:auto;
 	margin-right:auto;
 	height:50px;
-	width: 1063px;
-	border:1px solid black;
+	width: 100%;
+	border-top:1px solid black;
+    border-bottom: 1px solid black;
 	
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
@@ -15,12 +16,6 @@
 	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
-	
-	/*border-bottom-left-radius:50px;
-	border-top-left-radius:50px;
-	
-	border-bottom-right-radius:50px;
-	border-top-right-radius:50px;*/
 }
 
 .menu
@@ -47,21 +42,14 @@
 	line-height:50px;
 	text-align:center;
 	border-right:1px solid black;
-	/*border-left: 1px solid black;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;*/
 }
 
 .start-menu
 {
-	/*border-bottom-left-radius:50px;
-	border-top-left-radius:50px;*/
 }
 
 .end-menu
 {
-	/*border-bottom-right-radius:50px;
-	border-top-right-radius:50px;*/
 }
 
 .menu li:hover
@@ -87,8 +75,6 @@
 
 .sub-menu li
 {
-	/*border-top: 1px solid black;
-	border-left: 1px solid black;*/
 	-moz-transition:all .1s ease 0s;
 	-ms-transition:all .1s ease 0s;
 	-o-transition:all .1s ease 0s;
@@ -118,8 +104,6 @@
 	border-bottom: 1px solid black;
 	border-bottom-right-radius:10px;
 	border-bottom-left-radius:10px;
-
-
 }
 
 .menu li:hover .sub-menu

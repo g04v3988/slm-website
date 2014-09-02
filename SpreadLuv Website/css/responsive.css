@@ -1,0 +1,39 @@
+﻿img {
+    max-width:100%;
+}
+
+#page {
+    border-radius:10px;
+    width: 80%;
+    margin: 36px auto;
+    background-color: white;
+}
+
+.header
+{
+    border-top-left-radius:10px;
+    width:100%;
+    border:1px solid black;
+    height:20px;
+}
+
+.footer
+{
+    font-family: sans-serif;
+    font-size: 1em;
+    padding:2%;
+}
+
+.logo-container
+{
+    padding-left:2%;
+    float:left;
+    width:50%;
+}
+
+.social-media-container
+{
+    position:relative;
+    padding-top: 2%;
+    float: right;
+}

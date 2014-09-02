@@ -1,13 +1,13 @@
 ﻿#carousel 
 {
 	margin: auto;
-	width: 1063px;
+	width: 100%;
 	overflow:hidden;
 }
 
 #carousel ul 
 {
-	width: 6378px;
+	width: 600%;
 	padding: 0;
 	margin: 0;
 }
@@ -16,8 +16,7 @@
 {
 	display:block;
 	float:left;
-	width:1063px;
-	height:650px;
+	width:16.666666666666666666666666666667%;
 	text-align: center;
 	list-style: none;
 	float:	left;
