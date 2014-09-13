@@ -8,6 +8,10 @@
     });
 
     if (ww < 800) {
+        $(".toggleMenu").click(function (e) {
+            e.preventDefault();
+            $(".nav").toggle();
+        });
         $(".toggleMenu").css("display", "inline-block");
         $(".nav li a").click(function () {
             $(this).parent("li").toggleClass('hover');
