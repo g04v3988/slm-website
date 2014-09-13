@@ -45,7 +45,7 @@
 @media screen and (min-width: 950px)
 {
     .social-footer
-    {
+       {
         display: none;
     }
 }
@@ -79,4 +79,8 @@
         padding-right: 20px;
         float: right;
     }
+}
+
+.main {
+    padding-top:2%
 }
