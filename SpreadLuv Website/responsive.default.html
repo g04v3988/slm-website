@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css" type="text/css"/>
     <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/menu.css"/>
@@ -9,12 +10,13 @@
     <link rel="stylesheet" type="text/css" href="css/font/font.css"/>
     <link href="css/carousel.css" rel="stylesheet" />
     <!--<link href="css/responsive.menu.css" rel="stylesheet" />-->
-
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css">
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/responsivemenu.js"></script>
 </head>
-<body>
+<body class="ui-mobile-viewport">
     <div id="page">
             <div class="logo-container">
                 <img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg"/>
@@ -91,7 +93,23 @@
         <!-- Menu -->
 
         <div class="main">
-			<div id="slideShow" >
+			<div data-role="page" id="mobileslide">
+                <div data-role="header" data-position="fixed">
+				</div>
+				<div role="main" class="ui-content">
+					<div id="carousel">
+						<ul class="slides">
+							<li><img src="images/galleries/latest/1.jpg" /></li>
+							<li><img src="images/galleries/latest/2.jpg" /></li>
+							<li><img src="images/galleries/latest/3.jpg" /></li>
+							<li><img src="images/galleries/latest/4.jpg" /></li>
+							<li><img src="images/galleries/latest/5.jpg" /></li>
+							<li><img src="images/galleries/latest/6.jpg" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="slideShow">
 				<div id="carousel">
 					<ul class="slides">
 						<li><img src="images/galleries/latest/1.jpg" /></li>

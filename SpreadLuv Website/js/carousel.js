@@ -1,4 +1,5 @@
 ﻿$(document).ready(function(){
+
 	// Set the interval to be 7.5 seconds
     var t = setInterval(MoveNext, 7500);
 
@@ -21,19 +22,35 @@
 	$('#next').click(function(){
 		 var width = $("#carousel ul li").innerWidth;
 		 var ulCarousel = $("#carousel ul");
-		 ulCarousel.css({ marginLeft: -width });
-		 moveFirstAfterLast(ulCarousel);
+		 moveElement(ulCarousel,-width);
 	});
 	$('#previous').click(function(){
 		 var width = $("#carousel ul li").innerWidth;
 		 var ulCarousel = $("#carousel ul");
-		 ulCarousel.css({ marginLeft: width });
-		 moveFirstAfterLast(ulCarousel);
+		 moveElement(ulCarousel,width);
 	});
 	
+	function moveElement(element,width){
+		 element.css({ marginLeft: width });
+		 moveFirstAfterLast(element);
+	}
 	function moveFirstAfterLast(unorderedList){
 		$(unorderedList).find("li:last").after($(unorderedList).find("li:first"));
         $(unorderedList).css({ marginLeft: 0 });
 	}
 	
 });
+$( document ).on( "pagecreate", "#mobileslide", function() {
+		$(document).on( "swipeleft swiperight", "#slides li", function( event ) {
+			 var leftSwipeType = (event.type === "swipeleft");
+			 var rightSwipeType = (event.type === "swiperight");
+			 var width = $("#carousel ul li").innerWidth;
+			 var ulCarousel = $("#carousel ul");
+			 if(leftSwipeType){
+				moveElement(ulCarousel,-width);
+			 }
+			 if(rightSwipeType){
+				moveElement(ulCarousel,width);
+			 }
+		});
+	});
