@@ -1,6 +1,5 @@
-﻿@media screen and (min-width: 800px)
-{
-	#slideShow {
+﻿@media screen and (min-width: 800px){
+	.slideShow {
 		background-color: #F5F5F5;
 		border: 1px solid #FFFFFF;
 		box-shadow: 0 0 22px #111;
@@ -9,9 +8,9 @@
 		margin-right: 10%;
 		position: relative;
 		width: 80%;
-		padding:0.0139470013947001%;
+		padding:10px;
 	}
-	
+		
 	#carousel .arrow{
 		height:86px;
 		width:60px;
@@ -31,7 +30,7 @@
 		background-position: left top;
 		left: 0;
 	}
-
+	
 	#carousel .next:hover {
 		background-position: right bottom;
 	}
@@ -39,16 +38,6 @@
 	#carousel .next {
 		background-position: right top;
 		right: 0;
-	}
-	
-	#mobileslide{
-		display:none;
-	}
-}
-@media screen and (max-width: 800px)
-{
-	#slideShow{
-		display:none;
 	}
 }
 #carousel 
