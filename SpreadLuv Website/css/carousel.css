@@ -1,18 +1,4 @@
-﻿#carousel 
-{
-	margin: auto;
-	width: 100%;
-	overflow:hidden;
-	
-}
-#carousel ul 
-{
-	width: 600%;
-	padding: 0;
-	margin: 0;
-}
-
-@media screen and (min-width: 800px)
+﻿@media screen and (min-width: 800px)
 {
 	#slideShow {
 		background-color: #F5F5F5;
@@ -25,6 +11,7 @@
 		width: 80%;
 		padding:0.0139470013947001%;
 	}
+	
 	#carousel .arrow{
 		height:86px;
 		width:60px;
@@ -35,9 +22,11 @@
 		cursor:pointer;
 		z-index:5000;
 	}
+	
 	#carousel .previous:hover {
 		background-position: left bottom;
 	}
+	
 	#carousel .previous {
 		background-position: left top;
 		left: 0;
@@ -46,14 +35,36 @@
 	#carousel .next:hover {
 		background-position: right bottom;
 	}
+	
 	#carousel .next {
 		background-position: right top;
 		right: 0;
 	}
+	
 	#mobileslide{
 		display:none;
 	}
 }
+@media screen and (max-width: 800px)
+{
+	#slideShow{
+		display:none;
+	}
+}
+#carousel 
+{
+	margin: auto;
+	width: 100%;
+	overflow:hidden;
+}
+
+#carousel ul 
+{
+	width: 600%;
+	padding: 0;
+	margin: 0;
+}
+
 #carousel ul li 
 {
 	display:block;

@@ -23,8 +23,7 @@
 		 var width = $("#carousel ul li").innerWidth;
 		 var ulCarousel = $("#carousel ul");
 		 moveElement(ulCarousel,-width);
-	});
-	$('#previous').click(function(){
+	});	$('#previous').click(function(){
 		 var width = $("#carousel ul li").innerWidth;
 		 var ulCarousel = $("#carousel ul");
 		 moveElement(ulCarousel,width);
@@ -34,23 +33,19 @@
 		 element.css({ marginLeft: width });
 		 moveFirstAfterLast(element);
 	}
+	
 	function moveFirstAfterLast(unorderedList){
 		$(unorderedList).find("li:last").after($(unorderedList).find("li:first"));
         $(unorderedList).css({ marginLeft: 0 });
 	}
 	
-});
-$( document ).on( "pagecreate", "#mobileslide", function() {
-		$(document).on( "swipeleft swiperight", "#slides li", function( event ) {
-			 var leftSwipeType = (event.type === "swipeleft");
-			 var rightSwipeType = (event.type === "swiperight");
-			 var width = $("#carousel ul li").innerWidth;
-			 var ulCarousel = $("#carousel ul");
-			 if(leftSwipeType){
-				moveElement(ulCarousel,-width);
-			 }
-			 if(rightSwipeType){
-				moveElement(ulCarousel,width);
-			 }
-		});
+	$("#carousel ul").on( "swipeleft", function(event) {
+	 	 var width = $("#carousel ul li").innerWidth;
+		 moveElement($(this),-width);
 	});
+	
+	$("#carousel ul").on( "swiperight", function(event) {
+	 	 var width = $("#carousel ul li").innerWidth;
+		 moveElement($(this),width);
+	});
+});
