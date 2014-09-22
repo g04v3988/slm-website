@@ -1,0 +1,86 @@
+﻿img {
+    max-width:100%;
+}
+
+#page {
+    font-family: 'Century Gothic';
+    width: 100%;
+    background-color: white;
+}
+
+@media screen and (min-width: 950px) {
+    #page {
+        border-radius: 10px;
+        width: 95%;
+        margin: 36px auto;
+        background-color: white;
+    }
+}
+
+
+.header
+{
+    border-top-left-radius:10px;
+    width:100%;
+    border:1px solid black;
+    height:20px;
+}
+
+.footer
+{
+    font-size: 1em;
+    padding:2%;
+}
+
+.social-footer
+{
+    display: block;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 950px)
+{
+    .social-footer
+       {
+        display: none;
+    }
+}
+
+.logo-container
+{
+    padding-left: 2%;
+    width: 90%;
+}
+
+@media screen and (min-width: 950px)
+{
+    .logo-container
+    {
+        padding-left: 2%;
+        float: left;
+        width: 50%;
+    }
+}
+
+.social-media-container {
+        display: none;
+    }
+
+@media screen and (min-width: 950px)
+{
+    .social-media-container {
+        display:block;
+        position: relative;
+        padding-top: 20px;
+        padding-right: 20px;
+        float: right;
+    }
+}
+
+.main {
+    padding-top:2%
+}
