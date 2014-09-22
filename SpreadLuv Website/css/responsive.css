@@ -8,7 +8,7 @@
     background-color: white;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 800px) {
     #page {
         border-radius: 10px;
         width: 95%;
@@ -16,7 +16,6 @@
         background-color: white;
     }
 }
-
 
 .header
 {
@@ -42,7 +41,7 @@
     margin-right: auto;
 }
 
-@media screen and (min-width: 950px)
+@media screen and (min-width: 800px)
 {
     .social-footer
     {
@@ -56,7 +55,7 @@
     width: 90%;
 }
 
-@media screen and (min-width: 950px)
+@media screen and (min-width: 800px)
 {
     .logo-container
     {
@@ -70,7 +69,7 @@
         display: none;
     }
 
-@media screen and (min-width: 950px)
+@media screen and (min-width: 800px)
 {
     .social-media-container {
         display:block;
@@ -90,5 +89,21 @@
     .main
     {
         padding-top: 2%;
+    }
+}
+
+.twitter-feed
+{
+    display: none;
+    float:left;
+    padding-left: 2%;
+    width: 33%;
+}
+
+@media screen and (min-width: 1300px)
+{
+    .twitter-feed
+    {
+        display: block;
     }
 }

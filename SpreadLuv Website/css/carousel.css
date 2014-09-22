@@ -4,8 +4,8 @@
 		border: 1px solid #FFFFFF;
 		box-shadow: 0 0 22px #111;
 		height: 50%;
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: auto;
+		margin-right: auto;
 		position: relative;
 		width: 80%;
 		padding:10px;
@@ -40,6 +40,17 @@
 		right: 0;
 	}
 }
+
+@media screen and (min-width: 1300px)
+{
+    .slideShow
+    {
+        float: left;
+        margin-left: 2%;
+        width: 60%;
+    }
+}
+
 #carousel 
 {
 	margin: auto;
