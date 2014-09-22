@@ -13,7 +13,6 @@ a {text-decoration: none;}
 	margin-left:auto;
 	margin-right:auto;
 	width: 100%;
-	
 	background: rgba(102,46,145,1);
 }
 
@@ -41,7 +40,6 @@ a {text-decoration: none;}
     background: rgba(102,46,145,1);
     padding: 10px 15px;
     color: #fff;
-    
 }
 
 @media screen and (min-width: 800px)
@@ -58,7 +56,6 @@ a {text-decoration: none;}
         background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
         padding: 10px 15px;
-        color: #fff;
     }
 }
 
@@ -105,7 +102,7 @@ a {text-decoration: none;}
 
 .nav a {
     padding: 10px 15px;
-    color:black;
+    color: #fff;
     *zoom: 1;
 }
 
@@ -113,6 +110,7 @@ a {text-decoration: none;}
 {
     .nav a
     {
+        color: black;
         border-right: 1px solid black;
     }
 }
@@ -264,5 +262,20 @@ a {text-decoration: none;}
     }
    .nav > li.hover > ul , .nav li li.hover ul {
         position: static;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    .nav a:hover
+    {
+        background: #ffffff;
+        background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%,, color-stop(0%, #ffffff), color-stop(100%, #00ff01));
+        background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+        background: -o-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+        background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%, #00ff01 100%);
+        background: radial-gradient(ellipse at center, #ffffff 0%, #00ff01 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ff01', GradientType=1 );
     }
 }
