@@ -38,8 +38,9 @@ $(document).ready(function(){
 	
 	var adjustEvents = function () {
 	    if (ww < 800) {
+	        $('#next').off("click");
+	        $('#previous').off("click");
 	        $("#carousel ul").on("swipeleft", function (e) {
-	            e.preventDefault();
 	            clearInterval(t);
 	            var width = $("#carousel ul li").innerWidth;
 	            var ulCarousel = $("#carousel ul");
@@ -49,7 +50,6 @@ $(document).ready(function(){
 	        });
 
 	        $("#carousel ul").on("swiperight", function (e) {
-	            e.preventDefault();
 	            clearInterval(t);
 	            var width = $("#carousel ul li").innerWidth;
 	            var ulCarousel = $("#carousel ul");
@@ -62,7 +62,6 @@ $(document).ready(function(){
 	        $("#carousel ul").off("swiperight");
 	        $("#carousel ul").off("swipeleft");
 	        $('#next').on("click", function (e) {
-	            e.preventDefault();
 	            clearInterval(t);
 	            var width = $("#carousel ul li").innerWidth;
 	            var ulCarousel = $("#carousel ul");
@@ -70,7 +69,6 @@ $(document).ready(function(){
 	            moveFirstAfterLast(ulCarousel);
 	            t = setInterval(MoveNext, 7500);
 	        }); $('#previous').on("click", function (e) {
-	            e.preventDefault();
 	            clearInterval(t);
 	            var width = $("#carousel ul li").innerWidth;
 	            var ulCarousel = $("#carousel ul");

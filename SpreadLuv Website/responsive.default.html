@@ -28,6 +28,14 @@
 		
 	</head>
 	<body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 		<div id="page">
 			<div class="logo-container">
 				<img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg" /> </div>
@@ -42,28 +50,28 @@
 			<div class="container">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="test"><a href="#">Home</a> </li>
+					<li class="test"><a href="responsive.default.html">Home</a> </li>
 					<li class="test"><a href="#">About SLM</a>
 					<ul>
-						<li><a href="#">Vision &amp; Mission</a> </li>
-						<li><a href="#">History</a> </li>
-						<li><a href="#">Board</a> </li>
-						<li><a href="#">Partners</a> </li>
+						<li><a href="vision.html">Vision &amp; Mission</a> </li>
+						<li><a href="history.html">History</a> </li>
+						<li><a href="board.html">Board</a> </li>
+						<li><a href="partners.html">Partners</a> </li>
 					</ul>
 					</li>
 					<li class="test"><a href="#">Projects</a> </li>
 					<li class="test"><a href="#">Get Involved</a>
 					<ul>
-						<li><a href="#">Donate</a> </li>
+						<li><a href="donate.html">Donate</a> </li>
 						<li><a href="#">Volunteer</a> </li>
 						<li><a href="#">Partnerships</a> </li>
 					</ul>
 					</li>
 					<li class="test"><a href="#">News</a>
 					<ul>
-						<li><a href="#">Calendar</a> </li>
+						<li><a href="calendar.html">Calendar</a> </li>
 						<li><a href="#">News Letters</a> </li>
-						<li><a href="#">Gallery</a> </li>
+						<li><a href="gallery.html">Gallery</a> </li>
 					</ul>
 					</li>
 					<li class="test"><a href="#">Contact Us</a> </li>
@@ -85,14 +93,16 @@
 						<span id="next" class="arrow next"></span>
 					</div>
 				</div>
-
+                <!-- facebook feed -->
+                <div class="facebook-feed">
+                    <div class="fb-like-box" data-href="https://www.facebook.com/SpreadLuvMovement" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+			    </div>
                 <!-- twitter feed -->
                 <div class="twitter-feed">
                     <a class="twitter-timeline" data-border-color="#662e91" href="https://twitter.com/HenryTheGooner" data-widget-id="513997653890183169">Tweets by @HenryTheGooner</a>
                         <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-                </div>
-
-			 </div>
+                </div>  
+            </div>
 			<div class="footer" style="clear:both;">
 				We are a growing, dynamic, non-profit organisation, founded in 2009, comprising 
 				of young black professionals from all different walks of life, industries 
