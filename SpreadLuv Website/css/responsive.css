@@ -63,19 +63,6 @@
     padding-right: 2%;
 }
 
-    .content p
-    {
-        padding-bottom:10px;
-    }
-
-.content-header
-{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
 .footer
 {
     font-size: 1em;
@@ -168,4 +155,105 @@
     {
         display: block;
     }
+}
+
+.media-container
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width:800px)
+{
+    .media-container
+    {
+        width: 75%;
+    }
+}
+
+.video-container {
+    position: relative;
+    margin-top:10px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.calendar-container {
+    position: relative;
+    margin-top:10px;
+    padding-bottom: 112.5%;
+    height: 0;
+    overflow: hidden;
+}
+
+.calendar-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 384px)
+{
+    .calendar-container
+    {
+        padding-bottom: 50%;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    .calendar-container
+    {
+        margin-top:0px;
+    }
+}
+
+.donate-container
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h1
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h2
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.donate-container ul
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.donate-container li
+{
 }

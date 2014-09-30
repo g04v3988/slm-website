@@ -2,131 +2,97 @@
 <html>
 
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Spread Luv: Events Calendar</title>
-<link rel="stylesheet" type="text/css" href="css/menu.css"/>
-<link rel="stylesheet" type="text/css" href="css/general.css"/>
-<link rel="stylesheet" type="text/css" href="css/carousel.css"/>
-<link rel="stylesheet" type="text/css" href="css/ml-social-buttons.css"/>
-<link rel="stylesheet" type="text/css" href="css/font/font.css"/>
-<link href='css/fullcalendar.css' rel='stylesheet' />
-<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <title>Spread Luv: Events Calendar</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
+    <!-- cascading style sheets -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
+	<link href="css/font/font.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script src='js/moment.min.js'></script>
-<script src='js/fullcalendar.min.js'></script>
-<script src='js/gcal.js'></script>
-
-<script>
-
-	$(document).ready(function() {
-	
-		$('#calendar').fullCalendar({
-		
-			// US Holidays
-			events: 'https://www.google.com/calendar/feeds/vanderlinde.henry%40gmail.com/public/basic',
-			
-			eventClick: function(event) {
-				// opens events in a popup window
-				window.open(event.url, 'gcalevent', 'width=700,height=600');
-				return false;
-			},
-			
-			loading: function(bool) {
-				$('#loading').toggle(bool);
-			}
-			
-		});
-		
-	});
-
-</script>
-<style>
-
-	body {
-		margin: 0;
-		padding: 0;
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		font-size: 14px;
-	}
-		
-	#loading {
-		display: none;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
-
-	#calendar {
-		width: 900px;
-		margin: 40px auto;
-	}
-
-</style>
-
-
+    <!-- javascript -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).on("mobileinit", function () {
+            jQuery.mobile.autoInitializePage = false;
+        });
+    </script>  
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>	
+	<script src="js/carousel.js"></script>
+	<script src="js/responsivemenu.js"></script>
 </head>
 
 <body>
+    <div id="page">
 
-<div class="logo"><img alt="Spread Luv" height="125" src="images/Logos/SLM_V5_Text.jpg" width="50%"/><div class="social-media-icons">
-	<a href="http://www.facebook.com/SpreadLuvMovement" target="_blank" class="facebook" title="Facebook">
-	</a>
-	<a href="http://twitter.com/SLMGuide" target="_blank" class="twitter" title="Twitter">
-	</a>
-	<a href="http://www.linkedin.com/groups?home=&gid=4878381&trk=anet_ug_hm" target="_blank" class="linkedin" title="LinkedIn">
-	</a>
-</div></div>
+        <!-- Logo Header -->
+		<div class="logo-container">
+			<img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg" />
+		</div>
 
-<div class="container">
-<ul class="menu">
-<li class="start-menu"><a href="default.html">Home</a></li>
-<li>About SLM
-	<ul class="sub-menu">
-	<li><a href="vision.html">Mission & Vision</a></li>
-	<li><a href="history.html">History</a></li>
-	<li><a href="board.html">Board</a></li>
-	<li><a href="factsheet.html">Fact sheet</a></li>
-	<li class="sub-menu-end"><a href="partners.html">Partners</a></li>
-	</ul>
-</li>
-	
-<li>Projects</li>
-<li>Get Invloved
-	<ul class="sub-menu">
-	<li><a href="donate.html">Donate</a></li>
-	<li>Volunteer</li>
-	<li>Share</li>
-	<li class="sub-menu-end">Partnerships</li>
-	</ul>
+        <!-- Social media header -->
+		<div class="social-media-container">
+			<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook">
+			</a>
+			<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter">
+			</a>
+			<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn">
+			</a>
+		</div>
 
-</li>
-<li>News
-	<ul class="sub-menu">
-	<li>Articles</li>
-	<li><a href="calendar.html">Events Calendar</a></li>
-	<li>News Letter</li>
-	<li><a href="gallery.html">Gallery</a></li>
-	<li>General Blog</li>
-	<li>Photo Blog</li>
-	<li class="sub-menu-end">Press Kit</li>
-	</ul>
+		<!-- Menu -->
+		<div class="container">
+			<a class="toggleMenu" href="#">Menu</a>
+			<ul class="nav">
+				<li class="test"><a href="responsive.default.html">Home</a> </li>
+				<li class="test"><a href="#">About SLM</a>
+				<ul>
+					<li><a href="vision.html">Vision &amp; Mission</a> </li>
+					<li><a href="history.html">History</a> </li>
+					<li><a href="board.html">Board</a> </li>
+					<li><a href="partners.html">Partners</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">Projects</a> </li>
+				<li class="test"><a href="#">Get Involved</a>
+				<ul>
+					<li><a href="donate.html">Donate</a> </li>
+					<li><a href="#">Volunteer</a> </li>
+					<li><a href="#">Partnerships</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">News</a>
+				<ul>
+					<li><a href="calendar.html">Calendar</a> </li>
+					<li><a href="#">News Letters</a> </li>
+					<li><a href="gallery.html">Gallery</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">Contact Us</a> </li>
+			</ul>
+		</div>
 
-</li>
-<li>Contact Us</li>
-</ul>
+        <!-- Main content -->
+		<div class="main">
+            <div class="media-container">
+                <div class="calendar-container">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=g04v3988%40gmail.com&amp;color=%232952A3&amp;src=en.sa%23holiday%40group.v.calendar.google.com&amp;color=%232F6309&amp;ctz=Africa%2FJohannesburg" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
 
-</div>
+        <!-- Footer -->
+		<div class="footer" style="clear:both;">
 
-<div class="main-gallery">
-	<div class="bottom-page-border">
-		<div class="info-text-padding">
-			<div id='calendar'></div>
+            <!-- Social media footer -->
+			<div class="social-footer" >
+				<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook"></a>
+				<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter"></a>
+				<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn"></a>
+			</div>
 		</div>
 	</div>
-</div>
-
 </body>
-
 </html>

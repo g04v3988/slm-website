@@ -2,222 +2,96 @@
 
 <html>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Spread Luv: Home</title>
-<link rel="stylesheet" type="text/css" href="css/menu.css"/>
-<link rel="stylesheet" type="text/css" href="css/general.css"/>
-<link rel="stylesheet" type="text/css" href="css/ml-social-buttons.css"/>
-<link rel="stylesheet" type="text/css" href="css/font/font.css"/>
-<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <title>Spread Luv: Home</title>
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/gallery.js"></script>
+    <!-- mobile tag -->
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+		
+	<!-- cascading style sheets -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
+	<link href="css/font/font.css" rel="stylesheet" type="text/css" />
 
-<!-- The JavaScript -->
-        <script type="text/javascript">
-            $(function () {
-                //the loading image
-                var $loader = $('#st_loading');
-                //the ul element 
-                var $list = $('#st_nav');
-                //the current image being shown
-                var $currImage = $('#st_main').children('img:first');
-
-                //let's load the current image 
-                //and just then display the navigation menu
-                $('<img>').load(function () {
-                    $loader.hide();
-                    $currImage.fadeIn(3000);
-                    //slide out the menu
-                    setTimeout(function () {
-                        $list.animate({ 'left': '0px' }, 500);
-                    },
-					1000);
-                }).attr('src', $currImage.attr('src'));
-
-                //calculates the width of the div element 
-                //where the thumbs are going to be displayed
-                buildThumbs();
-
-                function buildThumbs() {
-                    var $elem = $(".album");
-                    var $thumbs_wrapper = $elem.find('.st_thumbs_wrapper');
-                    var $thumbs = $thumbs_wrapper.children(':first');
-                    //each thumb has 180px and we add 3 of margin
-                    var finalW = $thumbs.find('img').length * 183;
-                    $thumbs.css('width', finalW + 'px');
-                    //make this element scrollable
-                    makeScrollable($thumbs_wrapper, $thumbs);
-                }
-
-                //clicking on the menu items (up and down arrow)
-                //makes the thumbs div appear, and hides the current 
-                //opened menu (if any)
-                $list.find('.st_arrow_down').live('click', function () {
-                    var $this = $(this);
-                    hideThumbs();
-                    $this.addClass('st_arrow_up').removeClass('st_arrow_down');
-                    var $elem = $this.closest('li');
-                    $elem.addClass('current').animate({ 'height': '170px' }, 200);
-                    var $thumbs_wrapper = $this.parent().next();
-                    $thumbs_wrapper.show(200);
-                });
-                $list.find('.st_arrow_up').live('click', function () {
-                    var $this = $(this);
-                    $this.addClass('st_arrow_down').removeClass('st_arrow_up');
-                    hideThumbs();
-                });
-
-                //clicking on a thumb, replaces the large image
-                $list.find('.st_thumbs img').bind('click', function () {
-                    var $this = $(this);
-                    $loader.show();
-                    $('<img class="st_preview"/>').load(function () {
-                        var $this = $(this);
-                        var $currImage = $('#st_main').children('img:first');
-                        $this.insertBefore($currImage);
-                        $loader.hide();
-                        $currImage.fadeOut(2000, function () {
-                            $(this).remove();
-                        });
-                    }).attr('src', $this.attr('alt'));
-                }).bind('mouseenter', function () {
-                    $(this).stop().animate({ 'opacity': '1' });
-                }).bind('mouseleave', function () {
-                    $(this).stop().animate({ 'opacity': '0.7' });
-                });
-
-                //function to hide the current opened menu
-                function hideThumbs() {
-                    $list.find('li.current')
-						 .animate({ 'height': '50px' }, 400, function () {
-						     $(this).removeClass('current');
-						 })
-						 .find('.st_thumbs_wrapper')
-						 .hide(200)
-						 .andSelf()
-						 .find('.st_link span')
-						 .addClass('st_arrow_down')
-						 .removeClass('st_arrow_up');
-                }
-
-                //makes the thumbs div scrollable
-                //on mouse move the div scrolls automatically
-                function makeScrollable($outer, $inner) {
-                    var extra = 800;
-                    //Get menu width
-                    var divWidth = $outer.width();
-                    //Remove scrollbars
-                    $outer.css({
-                        overflow: 'hidden'
-                    });
-                    //Find last image in container
-                    var lastElem = $inner.find('img:last');
-                    $outer.scrollLeft(0);
-                    //When user move mouse over menu
-                    $outer.unbind('mousemove').bind('mousemove', function (e) {
-                        var containerWidth = lastElem[0].offsetLeft + lastElem.outerWidth() + 2 * extra;
-                        var left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra;
-                        $outer.scrollLeft(left);
-                    });
-                }
-            });
-        </script>
-
-
+    <!-- javascript -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).on("mobileinit", function () {
+            jQuery.mobile.autoInitializePage = false;
+        });
+    </script>  
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>	
+	<script src="js/carousel.js"></script>
+	<script src="js/responsivemenu.js"></script>
 </head>
 
 <body>
+    <div id="page">
 
-<div class="logo"><img alt="Spread Luv" height="125" src="images/Logos/SLM_V5_Text.jpg" width="50%"/>
-	<div class="social-media-icons">
-		<a href="http://www.facebook.com/SpreadLuvMovement" target="_blank" class="facebook" title="Facebook">
-		</a>
-		<a href="http://twitter.com/SLMGuide" target="_blank" class="twitter" title="Twitter">
-		</a>
-		<a href="http://www.linkedin.com/groups?home=&gid=4878381&trk=anet_ug_hm" target="_blank" class="linkedin" title="LinkedIn">
-		</a>
+        <!-- Logo Header -->
+		<div class="logo-container">
+			<img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg" />
+		</div>
+
+        <!-- Social media header -->
+		<div class="social-media-container">
+			<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook">
+			</a>
+			<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter">
+			</a>
+			<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn">
+			</a>
+		</div>
+
+		<!-- Menu -->
+		<div class="container">
+			<a class="toggleMenu" href="#">Menu</a>
+			<ul class="nav">
+				<li class="test"><a href="responsive.default.html">Home</a> </li>
+				<li class="test"><a href="#">About SLM</a>
+				<ul>
+					<li><a href="vision.html">Vision &amp; Mission</a> </li>
+					<li><a href="history.html">History</a> </li>
+					<li><a href="board.html">Board</a> </li>
+					<li><a href="partners.html">Partners</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">Projects</a> </li>
+				<li class="test"><a href="#">Get Involved</a>
+				<ul>
+					<li><a href="donate.html">Donate</a> </li>
+					<li><a href="#">Volunteer</a> </li>
+					<li><a href="#">Partnerships</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">News</a>
+				<ul>
+					<li><a href="calendar.html">Calendar</a> </li>
+					<li><a href="#">News Letters</a> </li>
+					<li><a href="gallery.html">Gallery</a> </li>
+				</ul>
+				</li>
+				<li class="test"><a href="#">Contact Us</a> </li>
+			</ul>
+		</div>
+
+        <!-- Main content -->
+		<div class="main">
+
+        </div>
+
+        <!-- Footer -->
+		<div class="footer" style="clear:both;">
+
+            <!-- Social media footer -->
+			<div class="social-footer" >
+				<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook"></a>
+				<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter"></a>
+				<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn"></a>
+			</div>
+		</div>
 	</div>
-</div>
-<div class="container">
-<ul class="menu">
-<li class="start-menu"><a href="default.html">Home</a></li>
-<li>About SLM
-	<ul class="sub-menu">
-	<li><a href="vision.html">Mission & Vision</a></li>
-	<li><a href="history.html">History</a></li>
-	<li><a href="board.html">Board</a></li>
-	<li><a href="factsheet.html">Fact sheet</a></li>
-	<li class="sub-menu-end"><a href="partners.html">Partners</a></li>
-	</ul>
-</li>
-	
-<li>Projects</li>
-<li>Get Invloved
-	<ul class="sub-menu">
-	<li><a href="donate.html">Donate</a></li>
-	<li>Volunteer</li>
-	<li>Share</li>
-	<li class="sub-menu-end">Partnerships</li>
-	</ul>
-
-</li>
-<li>News
-	<ul class="sub-menu">
-	<li>Articles</li>
-	<li><a href="calendar.html">Events Calendar</a></li>
-	<li>News Letter</li>
-	<li><a href="gallery.html">Gallery</a></li>
-	<li>General Blog</li>
-	<li>Photo Blog</li>
-	<li class="sub-menu-end">Press Kit</li>
-	</ul>
-
-</li>
-<li>Contact Us</li>
-</ul>
-</div>
-
-<div class="main-gallery">
-	<div class="info-text-padding-top">
-	    <div id="slideshow">
-
-            <!--<ul class="slides">
-                <li><img src="images/galleries/latest/1.jpg" width="1000" height="667" alt="Marsa Alam" /></li>
-                <li><img src="images/galleries/latest/2.jpg" width="1000" height="667" alt="Turrimetta Beach" /></li>
-                <li><img src="images/galleries/latest/3.jpg" width="1000" height="667" alt="Power Station" /></li>
-                <li><img src="images/galleries/latest/4.jpg" width="1000" height="667" alt="Colors of Nature" /></li>
-                <li><img src="images/galleries/latest/5.jpg" width="1000" height="667" alt="Colors of Nature" /></li>
-                <li><img src="images/galleries/latest/6.jpg" width="1000" height="667" alt="Colors of Nature" /></li>
-            </ul>-->
-
-            <span class="arrow previous"></span>
-            <span class="arrow next"></span>
-        </div>
-        <div class="album">
-            <div class="st_wrapper st_thumbs_wrapper">
-                <div class="st_thumbs">
-                    <ul>
-                        <li><img src="images/galleries/latest/thumbs/1.jpg" alt="images/galleries/latest/1.jpg" /></li>
-                        <li><img src="images/galleries/latest/thumbs/2.jpg" alt="images/galleries/latest/2.jpg" /></li>
-                        <li><img src="images/galleries/latest/thumbs/3.jpg" alt="images/galleries/latest/3.jpg" /></li>
-                        <li><img src="images/galleries/latest/thumbs/4.jpg" alt="images/galleries/latest/4.jpg" /></li>
-                        <li><img src="images/galleries/latest/thumbs/5.jpg" alt="images/galleries/latest/5.jpg" /></li>
-                        <li><img src="images/galleries/latest/thumbs/6.jpg" alt="images/galleries/latest/6.jpg" /></li>
-                    </ul>
-                    ...
-                </div>
-            </div>
-        </div>
-    </div>
-	
-	<div class="bottom-page-border">
-	<p class="info-text-padding">
-	</p>
-</div>
-
-</div>
-
 </body>
 
 </html>
