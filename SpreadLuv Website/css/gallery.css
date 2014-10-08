@@ -1,61 +1,54 @@
-﻿#slideshow{
-    background-color:#F5F5F5;
-    border:1px solid #FFFFFF;
-    height:687px;
-    margin-left:20px;
-    margin-right:20px;
-    position:relative;
-    width:1020px;
-
-    -moz-box-shadow:0 0 22px #111;
-    -webkit-box-shadow:0 0 22px #111;
-    box-shadow:0 0 22px #111;
+﻿.gallery
+{
+    width: 96%;
+    margin: auto;
 }
 
-#slideshow ul{
-    height:687px;
-    left:10px;
-    list-style:none outside none;
-    overflow:hidden;
-    position:absolute;
-    top:10px;
-    width:1020px;
+    .gallery h3
+    {
+        font-size: 1.25em;
+        padding: 10px;
+    }
+
+.album
+{
+    width: 96%;
+    margin: 2% 2% 2% 2%;
+    float: left;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
-#slideshow li{
-    position:absolute;
-    display:none;
-    z-index:10;
+    .album img
+    {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+@media screen and (min-width: 384px)
+{
+    .album
+    {
+        width: 46%;
+    }
 }
 
-#slideshow li:first-child{
-    display:block;
-    z-index:1000;
+@media screen and (min-width: 800px)
+{
+    .album
+    {
+        box-shadow: 0 0 22px #111;
+        width: 29.33333%;
+    }
 }
 
-#slideshow .slideActive{
-    z-index:1000;
+@media screen and (min-width: 1300px)
+{
+    .album
+    {
+        width: 16%;
+    }
 }
-
-#slideshow canvas{
-    display:none;
-    position:absolute;
-    z-index:100;
-}
-
-#slideshow .arrow{
-    height:86px;
-    width:60px;
-    position:absolute;
-    background:url('../images/arrows.png') no-repeat;
-    top:50%;
-    margin-top:-43px;
-    cursor:pointer;
-    z-index:5000;
-}
-
-#slideshow .previous{ background-position:left top;left:0;}
-#slideshow .previous:hover{ background-position:left bottom;}
-
-#slideshow .next{ background-position:right top;right:0;}
-#slideshow .next:hover{ background-position:right bottom;}

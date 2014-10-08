@@ -26,12 +26,13 @@ a {text-decoration: none;}
 
 @media screen and (min-width: 800px)
 {
-    .nav {
-    list-style: none;
-     *zoom: 1;
-     background-color: green;
-     position: relative;
-}
+    .nav
+    {
+        list-style: none;
+        *zoom: 1;
+        background-color: green;
+        position: relative;
+    }
 }
 
 .nav:before,
