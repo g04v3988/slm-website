@@ -1,101 +1,116 @@
 ﻿<!DOCTYPE html>
+<html >
+	<head>
+		<title></title>
 
-<html>
-<head>
+		<!-- mobile tag -->
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		
+		<!-- cascading style sheets -->
+        <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+		<link href="css/menu.css" rel="stylesheet" type="text/css" />
+		<link href="css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
+		<link href="css/font/font.css" rel="stylesheet" type="text/css" />
+		<link href="css/carousel.css" rel="stylesheet" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Spread Luv: Home</title>
-<link rel="stylesheet" type="text/css" href="css/menu.css"/>
-<link rel="stylesheet" type="text/css" href="css/general.css"/>
-<link rel="stylesheet" type="text/css" href="css/ml-social-buttons.css"/>
-<link rel="stylesheet" type="text/css" href="css/font/font.css"/>
-<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+		<!-- javascript -->
+		<script src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).on("mobileinit", function () {
+                jQuery.mobile.autoInitializePage = false;
+            });
+        </script>  
+		<script src="js/jquery.mobile-1.4.3.min.js"></script>	
+		<script src="js/carousel.js"></script>
+		<script src="js/responsivemenu.js"></script>
+	</head>
+	<body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+		<div id="page">
+			<div class="logo-container">
+				<img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg" /> </div>
+			<div class="social-media-container">
+				<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook">
+				</a>
+				<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter">
+				</a>
+				<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn">
+				</a></div>
+			<!-- Menu -->
+			<div class="container">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li class="test"><a href="default.html">Home</a> </li>
+					<li class="test"><a href="#">About SLM</a>
+					<ul>
+						<li><a href="vision.html">Vision &amp; Mission</a> </li>
+						<li><a href="history.html">History</a> </li>
+						<li><a href="board.html">Board</a> </li>
+						<li><a href="partners.html">Partners</a> </li>
+					</ul>
+					</li>
+					<li class="test"><a href="#">Projects</a> </li>
+					<li class="test"><a href="#">Get Involved</a>
+					<ul>
+						<li><a href="donate.html">Donate</a> </li>
+						<li><a href="#">Volunteer</a> </li>
+						<li><a href="#">Partnerships</a> </li>
+					</ul>
+					</li>
+					<li class="test"><a href="#">News</a>
+					<ul>
+						<li><a href="calendar.html">Calendar</a> </li>
+						<li><a href="#">News Letters</a> </li>
+						<li><a href="gallery.html">Gallery</a> </li>
+					</ul>
+					</li>
+					<li class="test"><a href="contact.html">Contact Us</a> </li>
+				</ul>
+			</div>
+			<div class="main">
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/gallery.js"></script>
-<script type="text/javascript" src="js/autoadvance.js"></script>
-<link rel="stylesheet" type="text/css" href="css/mobile.css">
-</code>
-
-</head>
-
-<body>
-
-<div class="logo"><img alt="Spread Luv" height="125" src="images/Logos/SLM_V5_Text.jpg" width="50%"/>
-	<div class="social-media-icons">
-		<a href="http://www.facebook.com/SpreadLuvMovement" target="_blank" class="facebook" title="Facebook">
-		</a>
-		<a href="http://twitter.com/SLMGuide" target="_blank" class="twitter" title="Twitter">
-		</a>
-		<a href="http://www.linkedin.com/groups?home=&gid=4878381&trk=anet_ug_hm" target="_blank" class="linkedin" title="LinkedIn">
-		</a>
-	</div>
-</div>
-<div class="container">
-<ul class="menu">
-<li class="start-menu"><a href="default.html">Home</a></li>
-<li>About SLM
-	<ul class="sub-menu">
-	<li><a href="vision.html">Mission & Vision</a></li>
-	<li><a href="history.html">History</a></li>
-	<li><a href="board.html">Board</a></li>
-	<li><a href="factsheet.html">Fact sheet</a></li>
-	<li class="sub-menu-end"><a href="partners.html">Partners</a></li>
-	</ul>
-</li>
-	
-<li>Projects</li>
-<li>Get Invloved
-	<ul class="sub-menu">
-	<li><a href="donate.html">Donate</a></li>
-	<li>Volunteer</li>
-	<li>Share</li>
-	<li class="sub-menu-end">Partnerships</li>
-	</ul>
-
-</li>
-<li>News
-	<ul class="sub-menu">
-	<li>Articles</li>
-	<li><a href="calendar.html">Events Calendar</a></li>
-	<li>News Letter</li>
-	<li><a href="gallery.html">Gallery</a></li>
-	<li>General Blog</li>
-	<li>Photo Blog</li>
-	<li class="sub-menu-end">Press Kit</li>
-	</ul>
-
-</li>
-<li>Contact Us</li>
-</ul>
-</div>
-
-<div class="main-gallery">
-	<div class="info-text-padding-top">
-	    <div id="slideshow">
-
-            <ul class="slides">
-                <li><img src="images/galleries/latest/1.jpg" width="1000" height="667" /></li>
-                <li><img src="images/galleries/latest/2.jpg" width="1000" height="667" /></li>
-                <li><img src="images/galleries/latest/3.jpg" width="1000" height="667" /></li>
-                <li><img src="images/galleries/latest/4.jpg" width="1000" height="667" /></li>
-                <li><img src="images/galleries/latest/5.jpg" width="1000" height="667" /></li>
-                <li><img src="images/galleries/latest/6.jpg" width="1000" height="667" /></li>
-            </ul>
-
-            <span class="arrow previous"></span>
-            <span class="arrow next"></span>
-        </div>
-        
-        <h1 class="info-text-padding">About Us</h1>
-	    <div class="info-text-padding">
-		    We are a growing, dynamic, non-profit organisation, founded in 2009, comprising of young black professionals from all different walks of life, industries and professions.  We specialise in giving career guidance tips to young learners at our Career Guidance Events.
-	    </div>
-    </div>
-    <div class="bottom-page-border"></div>
-</div>
-
-</body>
-
+                <!-- Slideshow -->
+				<div class="slideShow">
+					<div id="carousel">
+						<img id="slide" src=""/>
+						<span id="previous" class="arrow previous"></span>
+						<span id="next" class="arrow next"></span>
+					</div>
+				</div>
+                
+                <!-- Social-media feed -->
+                <div class="social-media-feed">
+                    <!-- facebook feed -->
+                    <div class="facebook-feed">
+                        <div class="fb-like-box" data-href="https://www.facebook.com/SpreadLuvMovement" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+			        </div>
+                    <!-- twitter feed -->
+                    <div class="twitter-feed">
+                        <a class="twitter-timeline" data-border-color="#662e91" href="https://twitter.com/HenryTheGooner" data-widget-id="513997653890183169">Tweets by @HenryTheGooner</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    </div> 
+                </div>
+            </div>
+			<div class="footer" style="clear:both;">
+				We are a growing, dynamic, non-profit organisation, founded in 2009, comprising 
+				of young black professionals from all different walks of life, industries 
+				and professions. We specialise in giving career guidance tips to young learners 
+				at our Career Guidance Events.
+				<div class="social-footer" >
+					<a class="social-media-a facebook" href="http://www.facebook.com/SpreadLuvMovement" target="_blank" title="Facebook"></a>
+					<a class="social-media-a twitter" href="http://twitter.com/SLMGuide" style="" target="_blank" title="Twitter"></a>
+					<a class="social-media-a linkedin" href="http://www.linkedin.com/groups?home=&amp;gid=4878381&amp;trk=anet_ug_hm" target="_blank" title="LinkedIn"></a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

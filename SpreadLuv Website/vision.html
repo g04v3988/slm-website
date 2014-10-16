@@ -2,17 +2,33 @@
 <html>
 
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Spread Luv: Vision</title>
+    <title></title>
+
+    <!-- mobile tag -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- cascading style sheets -->
+    <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="css/menu.css" rel="stylesheet" type="text/css" />
     <link href="css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
     <link href="css/font/font.css" rel="stylesheet" type="text/css" />
+    <link href="css/carousel.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/responsivemenu.js"></script>
+    <!-- javascript -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).on("mobileinit", function () {
+            jQuery.mobile.autoInitializePage = false;
+        });
+    </script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/responsivemenu.js"></script>
 </head>
+
+
 
 <body>
     <div id="page">
@@ -36,7 +52,7 @@
         <div class="container">
 	        <a class="toggleMenu" href="#">Menu</a>
 	        <ul class="nav">
-		        <li class="test"><a href="responsive.default.html">Home</a> </li>
+		        <li class="test"><a href="default.html">Home</a> </li>
 		        <li class="test"><a href="#">About SLM</a>
 		        <ul>
 			        <li><a href="vision.html">Vision &amp; Mission</a> </li>

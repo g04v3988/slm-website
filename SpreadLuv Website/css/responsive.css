@@ -1,9 +1,12 @@
-﻿img {
+﻿* {
+     font-family: 'Century Gothic' 'Arial' 'Didact Gothic';
+}
+img {
     max-width:100%;
 }
 
 #page {
-    font-family: 'Century Gothic';
+    /*font-family: 'Century Gothic' !important;*/
     width: 100%;
     background-color: white;
 }
