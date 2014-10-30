@@ -13,6 +13,7 @@
     <link href="../css/menu.css" rel="stylesheet" type="text/css" />
     <link href="../css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
     <link href="../css/font/font.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
 
     <!-- javascript -->
     <script src="../js/jquery-2.1.1.min.js"></script>
@@ -20,10 +21,17 @@
         jQuery(document).on("mobileinit", function () {
             jQuery.mobile.autoInitializePage = false;
         });
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				mode: 'fade',
+				captions: true
+			});
+		});
     </script>
     <script src="../js/jquery.mobile-1.4.3.min.js"></script>
     <script src="../js/carousel.js"></script>
     <script src="../js/responsivemenu.js"></script>
+	<script src="../js/jquery.bxslider.min.js"></script>
 </head>
 
 <body>
@@ -81,7 +89,16 @@
 
         <!-- Main content -->
         <div class="main">
-
+		   <div class="bx-wrapper" style="max-width: 100%;">
+				<div class="bx-viewport">
+					<ul class="bxslider">
+					  <li><img src="../images/galleries/latest/1.jpg" title="Stuff1"/></li>
+					  <li><img src="../images/galleries/latest/2.jpg" title="Stuff2"/></li>
+					  <li><img src="../images/galleries/latest/3.jpg" title="Stuff3"/></li>
+					  <li><img src="../images/galleries/latest/4.jpg" title="Stuff4"/></li>
+					</ul>
+				</div>
+			</div>
         </div>
 
         <!-- Footer -->

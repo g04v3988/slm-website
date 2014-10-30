@@ -8,22 +8,30 @@
 
     <!-- cascading style sheets -->
     <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
-    <link href="css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
-    <link href="css/font/font.css" rel="stylesheet" type="text/css" />
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ml-social-buttons.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font/font.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
 
     <!-- javascript -->
-    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         jQuery(document).on("mobileinit", function () {
             jQuery.mobile.autoInitializePage = false;
         });
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				mode: 'fade',
+				captions: true
+			});
+		});
     </script>
-    <script src="js/jquery.mobile-1.4.3.min.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/responsivemenu.js"></script>
+    <script src="../js/jquery.mobile-1.4.3.min.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/responsivemenu.js"></script>
+	<script src="../js/jquery.bxslider.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +39,7 @@
 
         <!-- Logo Header -->
         <div class="logo-container">
-            <img alt="Spread Luv" src="images/Logos/SLM_V5_Text.jpg" />
+            <img alt="Spread Luv" src="../images/Logos/SLM_V5_Text.jpg" />
         </div>
 
         <!-- Social media header -->
@@ -48,21 +56,21 @@
         <div class="container">
             <a class="toggleMenu" href="#">Menu</a>
             <ul class="nav">
-                <li class="test"><a href="default.html">Home</a> </li>
+                <li class="test"><a href="../default.html">Home</a> </li>
                 <li class="test">
                     <a href="#">About SLM</a>
                     <ul>
-                        <li><a href="vision.html">Vision &amp; Mission</a> </li>
-                        <li><a href="history.html">History</a> </li>
-                        <li><a href="board.html">Board</a> </li>
-                        <li><a href="partners.html">Partners</a> </li>
+                        <li><a href="../vision.html">Vision &amp; Mission</a> </li>
+                        <li><a href="../history.html">History</a> </li>
+                        <li><a href="../board.html">Board</a> </li>
+                        <li><a href="../partners.html">Partners</a> </li>
                     </ul>
                 </li>
                 <li class="test"><a href="#">Projects</a> </li>
                 <li class="test">
                     <a href="#">Get Involved</a>
                     <ul>
-                        <li><a href="donate.html">Donate</a> </li>
+                        <li><a href="../donate.html">Donate</a> </li>
                         <li><a href="#">Volunteer</a> </li>
                         <li><a href="#">Partnerships</a> </li>
                     </ul>
@@ -70,9 +78,9 @@
                 <li class="test">
                     <a href="#">News</a>
                     <ul>
-                        <li><a href="calendar.html">Calendar</a> </li>
+                        <li><a href="../calendar.html">Calendar</a> </li>
                         <li><a href="#">News Letters</a> </li>
-                        <li><a href="gallery.html">Gallery</a> </li>
+                        <li><a href="../gallery.html">Gallery</a> </li>
                     </ul>
                 </li>
                 <li class="test"><a href="contact.html">Contact Us</a> </li>
@@ -81,7 +89,16 @@
 
         <!-- Main content -->
         <div class="main">
-
+		   <div class="bx-wrapper" style="max-width: 100%;">
+				<div class="bx-viewport">
+					<ul class="bxslider">
+					  <li><img src="../images/galleries/latest/1.jpg" title="Stuff1"/></li>
+					  <li><img src="../images/galleries/latest/2.jpg" title="Stuff2"/></li>
+					  <li><img src="../images/galleries/latest/3.jpg" title="Stuff3"/></li>
+					  <li><img src="../images/galleries/latest/4.jpg" title="Stuff4"/></li>
+					</ul>
+				</div>
+			</div>
         </div>
 
         <!-- Footer -->
